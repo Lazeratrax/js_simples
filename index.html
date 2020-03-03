@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script>-->
+
+<!--        //6.8 Дерево объектов-->
+
+<!--        function Tree(rank, refs, number, code) {-->
+<!--            //фиксируем ранг уровня на котором объект-->
+<!--            this.rank = rank-->
+<!--            // номер объекта-->
+<!--            this.number = number || 1-->
+<!--            //формальный код объекта-->
+<!--            this.code = code || "| "-->
+<!--            this.code += this.rank + " ->" + this.number + "| "-->
+<!--            //создаем массив объектов-->
+<!--            if (this.rank > 1) {-->
+<!--                //массив-->
+<!--                this.next = new Array(refs)-->
+<!--                for (var k = 0; k < this.next.length; k++) {-->
+<!--                    //имеет место рекурсивный вызов функции конструктора-->
+<!--                    this.next[k] = new Tree(this.rank - 1, refs, k + 1, this.code)-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+
+<!--        //переопределение метода toString() для прототипа конструктора дерева объектов-->
+
+<!--        Tree.prototype.toString = function () {-->
+<!--            //локальная тестовая переменная-->
+<!--            var t = "Объект: ранг -" + this.rank + ", номер - " + this.number-->
+<!--            t += ", код - " + this.code + "<br>"-->
+<!--            //если объект не на последнем уровне-->
+<!--            if (this.rank > 1) {-->
+<!--                for (var k = 0; k < this.next.length; k++) {-->
+<!--                    //рекурсивный вызов метода toString()-->
+<!--                    t += this.next[k].toString()-->
+<!--                }-->
+<!--            }-->
+<!--            return t-->
+<!--        }-->
+<!--        //создаем дерево-->
+<!--        var myTree = new Tree(4, 2)-->
+<!--        //отображение в браузере-->
+<!--        document.write(myTree)-->
+
+<!--    </script>-->
+
+    <script>
+        function discountPrices (prices, discount) {
+            console.log(discounted) // undefined
+            var discounted = []
+            for (var i = 0; i < prices.length; i++) {
+                var discountedPrice = prices[i] * (1 - discount)
+                var finalPrice = Math.round(discountedPrice * 100) / 100
+                discounted.push(finalPrice)
+            }
+            console.log(i) // 3
+            console.log(discountedPrice) // 150
+            console.log(finalPrice) // 150
+            return discounted
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
